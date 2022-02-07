@@ -5,6 +5,7 @@ import DashBoard from "./components/dashboard/DashBoard";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import { useState } from "react";
+import MyPlan from "./components/plan/MyPlan";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           {/* {loggedIn ? <Navigate to="/home" />} */}
           <Route path="/login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
           <Route path="/register" element={<Register />} />
+          <Route path="/myplan" element={<MyPlan />} />
         </Routes>
       </Router>
     </div>
