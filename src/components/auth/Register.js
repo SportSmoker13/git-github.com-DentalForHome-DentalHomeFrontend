@@ -4,20 +4,18 @@ import { ImMobile } from 'react-icons/im'
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
 
-function Register() {
+function Register(props) {
 
-  const[mobile,setMobile] = useState()
+  const[name,setName] = useState()
     const[email,setEmail] = useState()
 
   const submitHandler = (event) => {
     event.preventDefault()
-    console.log(mobile)
-    axios.get("http://localhost:5000/api/user/" + mobile).then((res,err)=>{
+    axios.post("http://localhost:5000/api/user/" + name +"/" + email).then((res,err)=>{
       if(err){
         console.log(err)
       } else {
-        console.log("success")
-        return <Navigate to="/home" />
+        props.setLoggedIn(true)
       }
     })
   }
@@ -31,7 +29,7 @@ function Register() {
           <div className="login-input">
            
             <label className="login-input-text">Hello ! Welcome back</label>
-            <input placeholder="Mobile number" onChange={(e)=>{setMobile(e.target.value)}}/>
+            <input placeholder="Full Name" onChange={(e)=>{setName(e.target.value)}}/>
             <input placeholder="Email Address" onChange={(e)=>{setEmail(e.target.value)}}/>
             <button className="login-signin" type="submit">Register</button>
             
@@ -41,6 +39,7 @@ function Register() {
             
           </div>
           </form>
+          {props.loggedIn ? <Navigate to="/home" /> : null}
           {/* <div className="login-meta">hii</div> */}
         </div>
       </div>

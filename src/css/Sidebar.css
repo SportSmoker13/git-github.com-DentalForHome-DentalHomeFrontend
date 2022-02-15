@@ -35,13 +35,13 @@
     align-items: center;
     /* padding: 2px 0px 2px 0px; */
     list-style: none;
-    height: 60px;
+    height: 52px;
   }
   
   .nav-text a {
     text-decoration: none;
     color: rgb(107,109,104);
-    font-size: 18px;
+    font-size: 15px;
     width: 95%;
     height: 100%;
     display: flex;
@@ -77,15 +77,30 @@
     align-items: center;
     margin-right: 20px;
     color: rgb(107,109,104);
-    padding-bottom: 35px;
-    
+    padding-bottom: 25px;
+}
+.sidebar-dental {
+  font-size: 22px;
+}
+.sidebar-profile-edit {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
 }
 
 .profile-image {
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border-radius: 100px;
     background-color: rgb(227,185,109);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 0.6);
+}
+.profile-image-inner {
+  
+  height: 70px;
+  width: 70px;
 }
 
 .sidebar-profile-edit{

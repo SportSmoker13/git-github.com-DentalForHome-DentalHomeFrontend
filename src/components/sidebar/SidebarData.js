@@ -7,13 +7,13 @@ import  floss from '../../images/floss.svg'
 export const SidebarData = [
   {
     title: 'Dashboard',
-    path: '/',
+    path: '/home',
     icon: <AiIcons.AiFillDashboard style={{color:`rgb(107,109,104)`}} />,
     cName: 'nav-text'
   },
   {
     title: 'My Plan',
-    path: '/reports',
+    path: '/myplan',
     icon: <IoIcons.IoIosPaper style={{color:`rgb(107,109,104)`}} />,
     cName: 'nav-text'
   },
@@ -25,7 +25,7 @@ export const SidebarData = [
   },
   {
     title: 'My bookings',
-    path: '/team',
+    path: '/booking',
     icon: <FaIcons.FaCalendarAlt style={{color:`rgb(107,109,104)`}} />,
     cName: 'nav-text'
   },

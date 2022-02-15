@@ -6,6 +6,9 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import { useState } from "react";
 import MyPlan from "./components/plan/MyPlan";
+import FamilyPlan from "./components/plan/FamilyPlan";
+import Booking from "./components/booking/Booking";
+import Edit from "./components/edit/Edit";
 
 function App() {
 
@@ -18,8 +21,10 @@ function App() {
           <Route path="/home" exact element={<DashBoard />} />
           {/* {loggedIn ? <Navigate to="/home" />} */}
           <Route path="/login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/myplan" element={<MyPlan />} />
+          <Route path="/register" element={<Register loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+          <Route path="/myplan" element={<FamilyPlan />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/edit" element={<Edit />} />
         </Routes>
       </Router>
     </div>

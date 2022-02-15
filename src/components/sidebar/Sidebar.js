@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import '../../css/Sidebar.css';
 import { IconContext } from 'react-icons';
+import character1 from '../../images/character1.svg'
 
 function Sidebar() {
 
@@ -30,13 +31,15 @@ function Sidebar() {
               </Link>
             </li> */}
             <div className='sidebar-profile'>
-                <p><label className="sidebar-profile-dental" >Dental</label> For Home</p>
+                <p className='sidebar-dental'><label className="sidebar-profile-dental" >Dental</label> For Home</p>
                 {/* <img src={image} className='profile-image'/> */}
-                <div className='profile-image' />
+                <div className='profile-image'>
+                  <img src={character1} className='profile-image-inner'/>
+                </div>
                 <p>Jesson George</p>
                 <div className='sidebar-profile-edit'>
                   <FaIcons.FaUserEdit style={{padding:`20px 15px 0 0`,}} />
-                    <p>Edit Profile</p>
+                    <Link to={'/edit'} className="sidebar-profile-edit" ><p>Edit Profile</p></Link>
                 </div>
             </div>
             {SidebarData.map((item, index) => {
