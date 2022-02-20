@@ -19,7 +19,7 @@ export const SidebarData = [
   },
   {
     title: 'Services',
-    path: '/products',
+    path: '/service',
     icon: <img src={floss} style={{height:`20px`,width:`20px`}} />,
     cName: 'nav-text'
   },

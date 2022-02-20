@@ -119,3 +119,16 @@
     display: none;
   }
 }
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-img{
+  position: fixed;
+  bottom: 0;
+  height: 84px;
+  width: 98px;
+  margin: 1px 0 10px 82px;
+  box-shadow: 0 0px 20px rgb(0 0 0 / 0.6);
+  border-radius: 20px;
+}

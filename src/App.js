@@ -9,6 +9,7 @@ import MyPlan from "./components/plan/MyPlan";
 import FamilyPlan from "./components/plan/FamilyPlan";
 import Booking from "./components/booking/Booking";
 import Edit from "./components/edit/Edit";
+import Service from "./components/service/Service";
 
 function App() {
 
@@ -22,9 +23,10 @@ function App() {
           {/* {loggedIn ? <Navigate to="/home" />} */}
           <Route path="/login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
           <Route path="/register" element={<Register loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
-          <Route path="/myplan" element={<FamilyPlan />} />
+          <Route path="/myplan" element={<MyPlan />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/edit" element={<Edit />} />
+          <Route path="/service" element={<Service />} />
         </Routes>
       </Router>
     </div>

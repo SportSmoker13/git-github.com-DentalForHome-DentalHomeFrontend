@@ -6,6 +6,7 @@ import { SidebarData } from './SidebarData';
 import '../../css/Sidebar.css';
 import { IconContext } from 'react-icons';
 import character1 from '../../images/character1.svg'
+import sidebarFooter from '../../images/sidebarFooter.png'
 
 function Sidebar() {
 
@@ -55,6 +56,7 @@ function Sidebar() {
           </ul>
         </nav>
       </IconContext.Provider>
+      <img src={sidebarFooter} className='sidebar-img'/>
     </>
   );
 }
